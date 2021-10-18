@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "husky": "^7.0.2"
   },
   "devDependencies": {
     "chai": "^4.3.4",
@@ -15,5 +16,13 @@
     "test": "mocha --test 'tests/**.*.js'",
     "test-one": "mocha --test 'tests/**.*.js --grep'",
     "start": "node Main.js"
+  },
+  "husky":{
+    "hooks": {
+      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "post-applypatch": "echo \"[Husky] post-applypatch\"",
+      "pre-commit": "echo \"[Husky] pre-commit\""
+    }
   }
 }
